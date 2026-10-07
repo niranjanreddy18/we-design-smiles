@@ -119,12 +119,12 @@ function AboutSection() {
             </p>
           </div>
 
-          {/* Doctor Cards Grid: 1 col on mobile, 2 col on tablet, 3 col on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Doctor Cards Grid: 3 doctors side by side */}
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-6 lg:gap-8">
             {DOCTORS.map((doctor, idx) => (
               <article
                 key={idx}
-                className="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#06b6d4]/60 transition-all duration-300 overflow-hidden flex flex-col"
+                className="group bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#06b6d4]/60 transition-all duration-300 overflow-hidden flex flex-col"
               >
                 {/* Doctor Portrait Container */}
                 <div className="aspect-[4/5] w-full bg-slate-100 overflow-hidden relative">
@@ -140,26 +140,26 @@ function AboutSection() {
                 </div>
 
                 {/* Doctor Details */}
-                <div className="p-6 sm:p-7 flex flex-col flex-grow">
-                  <h3 className="font-bold text-slate-900 text-lg sm:text-xl tracking-tight group-hover:text-[#06b6d4] transition-colors">
+                <div className="p-3 sm:p-5 lg:p-7 flex flex-col flex-grow">
+                  <h3 className="font-bold text-slate-900 text-xs sm:text-lg lg:text-xl tracking-tight group-hover:text-[#06b6d4] transition-colors leading-snug">
                     {doctor.name}
                   </h3>
-                  <p className="text-xs text-[#06b6d4] font-bold mt-1 uppercase tracking-wider">
+                  <p className="text-[10px] sm:text-xs text-[#06b6d4] font-bold mt-0.5 sm:mt-1 uppercase tracking-wider leading-tight">
                     {doctor.title}
                   </p>
-                  <p className="text-xs text-slate-500 font-medium mt-1.5">
+                  <p className="text-[9px] sm:text-xs text-slate-500 font-medium mt-1 leading-tight">
                     {doctor.credentials}
                   </p>
-                  <p className="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed flex-grow">
+                  <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600 mt-2 sm:mt-3 leading-relaxed flex-grow line-clamp-3 sm:line-clamp-none">
                     {doctor.bio}
                   </p>
 
                   {/* Specialty Pills */}
-                  <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-100">
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-3 sm:mt-5 pt-2 sm:pt-4 border-t border-slate-100">
                     {doctor.specialties.map((spec, sIdx) => (
                       <span
                         key={sIdx}
-                        className="text-[11px] font-medium text-slate-600 bg-slate-100 group-hover:bg-cyan-50 group-hover:text-[#06b6d4] px-2.5 py-1 rounded-full transition-colors"
+                        className="text-[9px] sm:text-[11px] font-medium text-slate-600 bg-slate-100 group-hover:bg-cyan-50 group-hover:text-[#06b6d4] px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full transition-colors"
                       >
                         {spec}
                       </span>
@@ -169,11 +169,11 @@ function AboutSection() {
                   {/* Booking CTA link */}
                   <a
                     href="#appointment"
-                    className="inline-flex items-center justify-between w-full mt-5 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800 hover:text-[#06b6d4] transition-colors group/link"
+                    className="inline-flex items-center justify-between w-full mt-3 sm:mt-5 pt-2 sm:pt-3 border-t border-slate-100 text-[10px] sm:text-xs font-bold text-slate-800 hover:text-[#06b6d4] transition-colors group/link"
                   >
                     <span>Book Consultation</span>
                     <svg
-                      className="w-4 h-4 text-[#06b6d4] transform transition-transform group-hover/link:translate-x-1"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#06b6d4] transform transition-transform group-hover/link:translate-x-1"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
