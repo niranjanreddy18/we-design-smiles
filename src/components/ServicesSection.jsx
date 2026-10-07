@@ -112,28 +112,30 @@ function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-14 sm:mt-16">
+        {/* Services Grid: 3 in row 1, 3 in row 2 */}
+        <div className="grid grid-cols-3 gap-2.5 sm:gap-6 lg:gap-8 mt-10 sm:mt-14">
           {SERVICES.map((service) => (
             <article
               key={service.id}
-              className="group p-7 sm:p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#06b6d4] shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group p-3.5 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-white border border-slate-200 hover:border-[#06b6d4] shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
             >
-              <div className="w-12 h-12 rounded-xl bg-cyan-50 text-[#06b6d4] flex items-center justify-center group-hover:bg-[#06b6d4] group-hover:text-slate-950 transition-colors duration-300">
-                {service.icon}
+              <div>
+                <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-cyan-50 text-[#06b6d4] flex items-center justify-center group-hover:bg-[#06b6d4] group-hover:text-slate-950 transition-colors duration-300 shrink-0">
+                  {service.icon}
+                </div>
+                <h3 className="text-xs sm:text-base lg:text-lg font-bold text-slate-900 mt-3 sm:mt-5 tracking-tight leading-snug">
+                  {service.title}
+                </h3>
+                <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600 mt-1.5 sm:mt-2.5 leading-snug sm:leading-relaxed line-clamp-3 sm:line-clamp-none">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mt-6 tracking-tight">
-                {service.title}
-              </h3>
-              <p className="text-sm text-slate-600 mt-2.5 leading-relaxed">
-                {service.description}
-              </p>
               <a
                 href="#appointment"
-                className="inline-flex items-center gap-1.5 mt-5 text-xs font-bold text-[#06b6d4] hover:text-[#0891b2] transition-colors"
+                className="inline-flex items-center gap-1 sm:gap-1.5 mt-3 sm:mt-5 text-[10px] sm:text-xs font-bold text-[#06b6d4] hover:text-[#0891b2] transition-colors"
               >
-                Learn more
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <span>Learn more</span>
+                <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </a>

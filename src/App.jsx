@@ -9,10 +9,10 @@ import Footer from "./components/Footer";
 /** Thin decorative divider used between the three video sections */
 function VideoDivider({ label, description }) {
   return (
-    <div className="relative w-full bg-white py-14 sm:py-20 md:py-28 min-h-[240px] sm:min-h-[440px] md:min-h-[660px] flex flex-col items-center justify-center border-t border-b border-slate-100 text-center px-4 overflow-hidden">
+    <div className="relative w-full bg-white py-4 sm:py-6 md:py-8 flex flex-col items-center justify-center border-t border-b border-slate-100 text-center px-4 overflow-hidden">
       <div className="absolute inset-0 bg-radial from-cyan-500/5 via-transparent to-transparent pointer-events-none" />
-      <div className="relative z-10 flex flex-col items-center gap-2">
-        <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#0891b2] bg-cyan-50 px-4 py-1.5 rounded-full border border-cyan-200/70 shadow-xs">
+      <div className="relative z-10 flex flex-col items-center gap-1 sm:gap-1.5">
+        <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0891b2] bg-cyan-50 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full border border-cyan-200/70 shadow-xs">
           {label}
         </span>
         <p className="text-xs sm:text-sm text-slate-600 max-w-md font-medium leading-relaxed">

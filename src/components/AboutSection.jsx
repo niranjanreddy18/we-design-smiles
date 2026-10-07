@@ -33,46 +33,46 @@ function AboutSection() {
     <section id="about" className="bg-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
 
-        {/* ─── Hero Row: Story + Clinic Reception Image ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* ─── Hero Row: Story + Clinic Reception Image (Side by Side) ─── */}
+        <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-16 items-start">
 
           {/* Left: Story & Mission */}
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#06b6d4] bg-cyan-50 px-3.5 py-1.5 rounded-full border border-cyan-200/60 inline-block">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#06b6d4] bg-cyan-50 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-cyan-200/60 inline-block">
               Our Story
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mt-5 leading-[1.1]">
+            <h2 className="text-base sm:text-3xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mt-2 sm:mt-5 leading-tight">
               More Than a Dental Clinic —{" "}
               <span className="text-[#06b6d4]">A Smile Sanctuary</span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 mt-5 leading-relaxed">
+            <p className="text-xs sm:text-base lg:text-lg text-slate-600 mt-2 sm:mt-5 leading-relaxed line-clamp-4 sm:line-clamp-none">
               Founded over two decades ago, We Design Smiles was built on a single conviction: that every patient deserves world-class aesthetic dentistry delivered in an environment of total calm, trust, and artistry.
             </p>
-            <p className="text-base text-slate-600 mt-4 leading-relaxed">
+            <p className="hidden sm:block text-xs sm:text-base text-slate-600 mt-3 sm:mt-4 leading-relaxed">
               Our clinic merges surgical precision with genuine warmth. From the moment you walk through our doors, you&#39;ll experience care that treats you as an individual — not a procedure number.
             </p>
 
             {/* Mission Statement */}
-            <blockquote className="mt-8 pl-5 border-l-4 border-[#06b6d4] bg-cyan-50/50 rounded-r-xl py-4 pr-4">
-              <p className="text-slate-700 font-medium italic text-sm sm:text-base leading-relaxed">
+            <blockquote className="mt-3 sm:mt-8 pl-3 sm:pl-5 border-l-2 sm:border-l-4 border-[#06b6d4] bg-cyan-50/50 rounded-r-xl py-2 sm:py-4 pr-3 sm:pr-4">
+              <p className="text-slate-700 font-medium italic text-[11px] sm:text-sm lg:text-base leading-relaxed">
                 &#34;Our mission is to transform lives one smile at a time — combining cutting-edge technology with compassionate, patient-centred care.&#34;
               </p>
-              <footer className="mt-2 text-xs text-slate-500 font-semibold tracking-wide uppercase">
+              <footer className="mt-1 sm:mt-2 text-[9px] sm:text-xs text-slate-500 font-semibold tracking-wide uppercase">
                 — Clinic Founding Mission Statement
               </footer>
             </blockquote>
 
             {/* Credential Highlights */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-3 sm:mt-8">
               {[
                 { label: "Years of Excellence", value: "25+" },
                 { label: "Specialist Dentists", value: "12+" },
                 { label: "Procedures Completed", value: "50k+" },
                 { label: "Awards & Accreditations", value: "18" },
               ].map((item) => (
-                <div key={item.label} className="p-4 bg-white rounded-xl border border-slate-200 shadow-xs">
-                  <p className="text-2xl font-extrabold text-[#06b6d4]">{item.value}</p>
-                  <p className="text-xs text-slate-500 mt-0.5 font-medium uppercase tracking-wide">{item.label}</p>
+                <div key={item.label} className="p-2 sm:p-4 bg-white rounded-lg sm:rounded-xl border border-slate-200 shadow-xs">
+                  <p className="text-sm sm:text-2xl font-extrabold text-[#06b6d4]">{item.value}</p>
+                  <p className="text-[9px] sm:text-xs text-slate-500 mt-0.5 font-medium uppercase tracking-wide leading-tight">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -80,7 +80,7 @@ function AboutSection() {
 
           {/* Right: Clinic Reception Photograph */}
           <div className="relative group">
-            <div className="aspect-[16/10] sm:aspect-[16/10] w-full rounded-3xl overflow-hidden bg-slate-100 shadow-xl border border-slate-200/80">
+            <div className="aspect-[16/10] w-full rounded-xl sm:rounded-3xl overflow-hidden bg-slate-100 shadow-xl border border-slate-200/80">
               <img
                 src="/doctors/01_reception.png"
                 alt="We Design Smiles modern dental clinic welcome reception and patient lounge"
@@ -91,13 +91,13 @@ function AboutSection() {
               />
             </div>
             {/* Floating accent badge */}
-            <div className="absolute -bottom-5 -left-4 sm:-left-5 bg-slate-950 text-white rounded-2xl px-5 py-3.5 shadow-xl border border-white/10 backdrop-blur-md">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#06b6d4] animate-pulse" />
-                <p className="text-xl sm:text-2xl font-extrabold text-[#06b6d4] tracking-tight">A+</p>
-                <span className="text-xs font-semibold text-slate-300">Accredited Clinic</span>
+            <div className="absolute -bottom-3 sm:-bottom-5 -left-2 sm:-left-5 bg-slate-950 text-white rounded-lg sm:rounded-2xl px-2.5 sm:px-5 py-1.5 sm:py-3.5 shadow-xl border border-white/10 backdrop-blur-md">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="w-1.5 sm:w-2.5 h-1.5 sm:h-2.5 rounded-full bg-[#06b6d4] animate-pulse" />
+                <p className="text-sm sm:text-2xl font-extrabold text-[#06b6d4] tracking-tight">A+</p>
+                <span className="text-[10px] sm:text-xs font-semibold text-slate-300">Accredited</span>
               </div>
-              <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">
+              <p className="text-[8px] sm:text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">
                 Modern Reception &amp; Lounge
               </p>
             </div>

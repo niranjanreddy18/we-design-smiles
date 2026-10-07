@@ -330,7 +330,7 @@ function VideoScrubber({
       />
 
       {/* Responsive Canvas Container with 16:9 ratio and max-w-[1200px] */}
-      <div className="relative w-full max-w-[1200px] px-3 sm:px-6 lg:px-8 flex items-center justify-center py-6 sm:py-10 md:py-16">
+      <div className="relative w-full max-w-[1200px] px-3 sm:px-6 lg:px-8 flex items-center justify-center py-3 sm:py-6 md:py-8">
         <div className="relative w-full aspect-video max-h-[82vh] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/80 bg-slate-100 flex items-center justify-center">
           
           {/* HTML5 Canvas rendering WebP frames */}
