@@ -320,7 +320,7 @@ function VideoScrubber({
   return (
     <section
       ref={sectionRef}
-      className={`relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-white select-none ${className}`.trim()}
+      className={`relative w-full md:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white select-none ${className}`.trim()}
       aria-label={ariaLabel || overlayTitle}
     >
       {/* Subtle background ambient lighting glow */}
@@ -330,7 +330,7 @@ function VideoScrubber({
       />
 
       {/* Responsive Canvas Container with 16:9 ratio and max-w-[1200px] */}
-      <div className="relative w-full max-w-[1200px] px-3 sm:px-6 lg:px-8 flex items-center justify-center pt-20 sm:pt-24 pb-12 sm:pb-16">
+      <div className="relative w-full max-w-[1200px] px-3 sm:px-6 lg:px-8 flex items-center justify-center pt-3 sm:pt-8 md:pt-24 pb-3 sm:pb-6 md:pb-16">
         <div className="relative w-full aspect-video max-h-[82vh] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200/80 bg-slate-100 flex items-center justify-center">
           
           {/* HTML5 Canvas rendering WebP frames */}
@@ -356,11 +356,11 @@ function VideoScrubber({
           )}
 
           {/* Bottom white gradient transition into next section */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[18%] min-h-[58px] sm:min-h-[72px] md:min-h-[84px] bg-gradient-to-t from-white/95 via-white/80 to-transparent flex flex-col items-center justify-end pb-2 sm:pb-3.5 md:pb-4 px-4 text-center z-10">
-            <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-slate-900 drop-shadow-xs line-clamp-1">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%] min-h-[48px] sm:min-h-[72px] md:min-h-[84px] bg-gradient-to-t from-white/95 via-white/80 to-transparent flex flex-col items-center justify-end pb-1.5 sm:pb-3.5 md:pb-4 px-3 sm:px-4 text-center z-10">
+            <h2 className="text-xs sm:text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-slate-900 drop-shadow-xs line-clamp-1">
               {overlayTitle}
             </h2>
-            <p className="text-[11px] sm:text-xs md:text-sm lg:text-base text-slate-700 font-medium mt-0.5 sm:mt-1 drop-shadow-xs line-clamp-1">
+            <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-slate-700 font-medium mt-0.5 sm:mt-1 drop-shadow-xs line-clamp-1">
               {overlayDescription}
             </p>
           </div>
@@ -369,7 +369,7 @@ function VideoScrubber({
 
       {/* Subtle animated scroll indicator near bottom of hero */}
       <div
-        className="pointer-events-none absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5"
+        className="pointer-events-none absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-1.5"
         aria-hidden="true"
       >
         <span className="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-slate-600 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200/80 shadow-sm">
